@@ -3,11 +3,13 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium import webdriver
 import unittest
 
+#using Unit Test
 class AndroidCalculatorTest(unittest.TestCase):
 
 	def setUp(self):
 		self.driver = webdriver.Remote(
 		command_executor='http://127.0.0.1:4723/wd/hub',
+		#need add two extra capabilities for native app
 		desired_capabilities={'browserName': 'Android',
 								'version': '4.2',
 								'platform': 'Windows"',
