@@ -23,7 +23,6 @@ class AndroidCalculatorTest(unittest.TestCase):
 		driver.find_element_by_name("4").click()
 		driver.find_element_by_name("=").click()
 		result = driver.find_element_by_tag_name("EditText").text
-		print(result)
 		self.assertIn("6",result)
 		
 	def test_sub_operation(self):
@@ -33,7 +32,6 @@ class AndroidCalculatorTest(unittest.TestCase):
 		driver.find_element_by_name("4").click()
 		driver.find_element_by_name("=").click()
 		result = driver.find_element_by_tag_name("EditText").text
-		print(result)
 		self.assertIn("5",result)
 		
 	def test_mul_operation(self):
@@ -43,17 +41,15 @@ class AndroidCalculatorTest(unittest.TestCase):
 		driver.find_element_by_name("4").click()
 		driver.find_element_by_name("=").click()
 		result = driver.find_element_by_tag_name("EditText").text
-		print(result)
 		self.assertIn("36",result)
 
 	def test_div_operation(self):
 		driver = self.driver
 		driver.find_element_by_name("9").click()
-		driver.find_element_by_name("multiply").click()
+		driver.find_element_by_name("divide").click()
 		driver.find_element_by_name("3").click()
 		driver.find_element_by_name("=").click()
 		result = driver.find_element_by_tag_name("EditText").text
-		print(result)
 		self.assertIn("3",result)
 
 	def tearDown(self):
